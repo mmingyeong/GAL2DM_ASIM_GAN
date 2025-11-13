@@ -1,0 +1,122 @@
+# ============================
+# Python / Packaging
+# ============================
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# ============================
+# Jupyter
+# ============================
+.ipynb_checkpoints/
+*.ipynb~
+
+# ============================
+# Virtual Envs / Tools
+# ============================
+.venv/
+venv/
+env/
+.conda/
+conda-env/
+.poetry/
+.poetry-cache/
+.poetry-local/
+.pyenv/
+.env
+.env.*
+
+# ============================
+# IDE / OS cruft
+# ============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ============================
+# Logs / SLURM
+# ============================
+logs/
+*.log
+*.out
+*.err
+slurm-*.out
+slurm-*.err
+*.console.log
+
+# ============================
+# Checkpoints / TensorBoard
+# ============================
+results/
+checkpoints/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# (옵션) 결과 디렉토리는 통째로 무시하지만,
+# 필요 시 빈 파일을 두고 싶다면 아래 주석 해제 후 results/.keep 커밋
+# !results/.keep
+
+# ============================
+# Predictions / Audits / Temp subsets
+# ============================
+**/preds_*/
+audit_out/
+**/_subset_pred_*/
+
+# ============================
+# Data & Large Arrays
+# (대용량 바이너리 전부 제외: hdf5, npy, 등)
+# ============================
+data/
+datasets/
+**/*.h5
+**/*.hdf5
+**/*.npz
+**/*.npy
+**/*.pkl
+**/*.dat
+**/*.bin
+
+# 테스트용 소형 픽스처만 허용 (원하면 유지)
+!tests/fixtures/**/*
+!tests/data/**/*
+
+# ============================
+# Project-specific configs
+# 실제 경로/비밀 포함 YAML은 무시하고,
+# 예시 템플릿만 추적
+# ============================
+etc/asim_paths.yaml
+!etc/asim_paths.example.yaml
+
+# ============================
+# Caches / Typecheck / Misc
+# ============================
+*.cache
+.cache/
+.pytest_cache/
+.mypy_cache/
+__pyo3cache__/
+*.prof
+*.nvprof
+*.qdrep
+*.nsys-rep
+
+# Editor swaps / temps
+*.swp
+*.swo
+*.bak
+*.tmp
